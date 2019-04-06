@@ -1,0 +1,16 @@
+<div>
+  <form [formGroup]="form" class="form-container">
+    <mat-form-field full>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput formControlName="details"/>
+    </mat-form-field>
+  </form>
+  <h2 *ngIf="!!item && item.isComplete" class="complete-text">Complete!</h2>
+  <div class="action-container">
+    <button mat-fab [disabled]="!item || item.isComplete" (click)="onCompleteItem()">
+      <mat-icon>check</mat-icon>
+    </button>
+  </div>
+</div>

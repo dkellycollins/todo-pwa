@@ -1,0 +1,8 @@
+<div>
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </mat-toolbar>
+  <app-todo-details [item]="item$ | async" (completeItem)="onCompleteItem($event)"></app-todo-details>
+</div>

@@ -1,0 +1,13 @@
+<div>
+  <mat-toolbar color="primary" class="mat-elevation-z4">
+    TODO PWA
+  </mat-toolbar>
+
+  <app-todo-list [items]="items" (editItem)="onEditItem($event)"></app-todo-list>
+
+  <div class="action-container">
+    <button mat-fab (click)="onAddItem()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>

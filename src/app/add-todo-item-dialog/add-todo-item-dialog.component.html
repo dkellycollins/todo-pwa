@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Add Item</h1>
+<div mat-dialog-content>
+  <form [formGroup]="form" class="form-container">
+    <mat-form-field>
+      <input matInput placeholder="Title" formControlName="title" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Details" formControlName="details"/>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSubmit()">Submit</button>
+</div>

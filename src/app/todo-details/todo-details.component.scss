@@ -1,0 +1,17 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.action-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 16px;
+}
+
+.complete-text {
+  text-align: center;
+  color: green;
+}
