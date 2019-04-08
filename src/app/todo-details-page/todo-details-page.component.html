@@ -1,8 +1,12 @@
 <div>
-  <mat-toolbar color="primary">
-    <button mat-icon-button (click)="goBack()">
-      <mat-icon>arrow_back</mat-icon>
-    </button>
-  </mat-toolbar>
-  <app-todo-details [item]="item$ | async" (completeItem)="onCompleteItem($event)"></app-todo-details>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-icon name="arrow-back" (click)="goBack()"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen="true">
+      <app-todo-details [item]="item$ | async" (completeItem)="onCompleteItem($event)"></app-todo-details>
+  </ion-content>
 </div>

@@ -1,13 +1,13 @@
 <div>
-  <mat-toolbar color="primary" class="mat-elevation-z4">
-    TODO PWA
-  </mat-toolbar>
-
-  <app-todo-list [items]="items" (editItem)="onEditItem($event)"></app-todo-list>
-
-  <div class="action-container">
-    <button mat-fab (click)="onAddItem()">
-      <mat-icon>add</mat-icon>
-    </button>
-  </div>
+  <ion-header>
+    <ion-toolbar color="primary">Todo PWA</ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen="true">
+    <app-todo-list [items]="items" (editItem)="onEditItem($event)"></app-todo-list>
+  </ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="onAddItem()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </div>

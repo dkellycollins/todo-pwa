@@ -47,7 +47,6 @@ export class TodoDetailsComponent implements OnInit {
       return;
     }
 
-    console.log(`onCompleteItem => ${this.item.id}`);
     this.completeItem.emit(this.item.id);
   }
 }

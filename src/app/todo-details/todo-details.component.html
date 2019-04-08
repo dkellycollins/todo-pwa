@@ -1,16 +1,18 @@
 <div>
-  <form [formGroup]="form" class="form-container">
-    <mat-form-field full>
-      <input matInput formControlName="title" />
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput formControlName="details"/>
-    </mat-form-field>
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label position="floating">Title</ion-label>
+      <ion-input formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Details</ion-label>
+      <ion-input formControlName="details"></ion-input>
+    </ion-item>
   </form>
   <h2 *ngIf="!!item && item.isComplete" class="complete-text">Complete!</h2>
-  <div class="action-container">
-    <button mat-fab [disabled]="!item || item.isComplete" (click)="onCompleteItem()">
-      <mat-icon>check</mat-icon>
-    </button>
-  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [disabled]="item.isComplete" (click)="onCompleteItem()">
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </div>
