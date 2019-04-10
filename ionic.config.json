@@ -1,5 +1,7 @@
 {
   "name": "TodoPwa",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
